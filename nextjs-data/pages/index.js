@@ -20,7 +20,7 @@ export async function getStaticProps() {
     props: {
       products: data.products,
     },
-    revalidate: 10
+    revalidate: 10 // durée avant le prochain generate de la page
   };
 }
 export default HomePage;
