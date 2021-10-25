@@ -29,7 +29,7 @@ export async function getStaticProps() {
     };
   }
 
-  if (data.producs.length === 0) {
+  if (data.products.length === 0) {
     return { notFound: true };
   }
   return {
