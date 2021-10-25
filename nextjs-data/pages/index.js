@@ -12,6 +12,7 @@ function HomePage(props) {
   );
 }
 export async function getStaticProps() {
+  console.log('(Re-)Generating...');
   const filePath = path.join(process.cwd(), "data", "dummy-backend.json"); // création du chemin vers le fichier contenant les datas
   const jsonData = await fs.readFile(filePath); // lecture du fichier
   const data = JSON.parse(jsonData); // convertit le json en objet JS
@@ -19,6 +20,7 @@ export async function getStaticProps() {
     props: {
       products: data.products,
     },
+    revalidate: 10
   };
 }
 export default HomePage;
