@@ -5,10 +5,12 @@ function UserProfilePage(props) {
 export default UserProfilePage;
 
 export async function getServerSideProps(context) {
-    const { params, req, res } = context;
-  return { // excecute on the server after deployment
+  const { params, req, res } = context;
+  console.log("Server Side code");
+  return {
+    // excecute on the server after deployment
     props: {
-        username: 'Max'
+      username: "Max",
     },
   };
 }
