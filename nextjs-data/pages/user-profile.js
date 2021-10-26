@@ -6,8 +6,6 @@ export default UserProfilePage;
 
 export async function getServerSideProps(context) {
     const { params, req, res } = context;
-    console.log(req);
-    console.log(res);
   return { // excecute on the server after deployment
     props: {
         username: 'Max'
