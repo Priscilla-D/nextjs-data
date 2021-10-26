@@ -36,7 +36,7 @@ export async function getStaticProps(context) {
     props: {
       loadedProduct: product,
     },
-  };
+  };   
 }
 
 export async function getStaticPaths() {
